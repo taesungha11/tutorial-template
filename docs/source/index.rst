@@ -13,5 +13,5 @@ Contents
    1. Regression <Regression.rst>
    2. MCMC <MCMC.rst>
    3. Bayesian <Bayesian.rst>
-   4. Web Crawling <WebCrarwling.rst>
+   4. Web Crawling <WebCrawling.rst>
    
