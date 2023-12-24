@@ -52,32 +52,32 @@ Python Code Example:
 
 .. code-block:: python
 
-import numpy as np
-import matplotlib.pyplot as plt
-import pymc3 as pm
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import pymc3 as pm
 
-# Generate synthetic data
-np.random.seed(42)
-true_slope = 2
-true_intercept = 3
-noise = np.random.normal(scale=2, size=100)
-x = np.linspace(0, 10, 100)
-y_true = true_slope * x + true_intercept
-y_observed = y_true + noise
+    # Generate synthetic data
+    np.random.seed(42)
+    true_slope = 2
+    true_intercept = 3
+    noise = np.random.normal(scale=2, size=100)
+    x = np.linspace(0, 10, 100)
+    y_true = true_slope * x + true_intercept
+    y_observed = y_true + noise
 
-# Bayesian linear regression model using PyMC3
-with pm.Model() as model:
-    # Priors for the parameters
-    slope = pm.Normal('slope', mu=0, sd=10)
-    intercept = pm.Normal('intercept', mu=0, sd=10)
+    # Bayesian linear regression model using PyMC3
+    with pm.Model() as model:
+        # Priors for the parameters
+        slope = pm.Normal('slope', mu=0, sd=10)
+        intercept = pm.Normal('intercept', mu=0, sd=10)
 
-    # Likelihood
-    likelihood = pm.Normal('y', mu=slope*x + intercept, sd=2, observed=y_observed)
+        # Likelihood
+        likelihood = pm.Normal('y', mu=slope*x + intercept, sd=2, observed=y_observed)
 
-    # MCMC sampling
-    trace = pm.sample(2000, tune=1000, cores=1)  # Adjust these values based on your needs
+        # MCMC sampling
+        trace = pm.sample(2000, tune=1000, cores=1)  # Adjust these values based on your needs
 
-# Plotting the results
-pm.traceplot(trace)
-plt.show()
+    # Plotting the results
+    pm.traceplot(trace)
+    plt.show()
 
