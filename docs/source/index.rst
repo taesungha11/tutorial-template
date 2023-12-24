@@ -2,7 +2,8 @@ Welcome to TS.Ha's documentation!
 ===================================
 
 .. note::
-This GitHub web page is to keep the record of studying in statistics with Python and R examples.
+This GitHub webpage documents the study of statistics with Python and R examples.
+
 
 Contents
 --------
