@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'TS.HA-STAT'
+copyright = '2023, TS.HA'
+author = 'TS.HA'
 
 release = '0.1'
 version = '0.1.0'
