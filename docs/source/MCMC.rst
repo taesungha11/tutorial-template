@@ -50,6 +50,8 @@ Popular statistical software packages like Stan, JAGS (Just Another Gibbs Sample
 Python Code Example:
 ---------------------
 
+.. code-block:: python
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pymc3 as pm
